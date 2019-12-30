@@ -1,3 +1,4 @@
 node_modules
 dist
 .serverless
+/02_Auth/backend/package-lock.json

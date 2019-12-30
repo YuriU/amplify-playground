@@ -4,16 +4,16 @@ frameworkVersion: ">=1.9.0 <2.0.0"
 
 provider:
   name: aws
-  region: us-east-1
+  region: eu-central-1
   runtime: nodejs8.10
   
 custom:
   stage: ${opt:stage, self:provider.stage}
-  devCognitoPool: 'arn:aws:cognito-idp:us-east-1:039810988692:userpool/us-east-1_6sYiKtiu3'
+  devCognitoPool: 
   
 functions:
   test:
-    handler: backend/test_auth.handler
+    handler: test_auth.handler
     events:
       - http:
           cors: true
