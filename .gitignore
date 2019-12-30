@@ -1,2 +1,3 @@
-/01_SimplestApp/amplify-js-app/node_modules
-/01_SimplestApp/amplify-js-app/dist
+node_modules
+dist
+.serverless
