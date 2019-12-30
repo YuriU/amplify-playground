@@ -64,7 +64,7 @@ TestEndpointButton.addEventListener('click', async (evt) => {
   try {
     let accessToken = await (await Auth.currentSession()).getAccessToken().getJwtToken();
     
-    let result = await fetch(`https://wdk78z2fl4.execute-api.eu-central-1.amazonaws.com/dev/test`, {
+    let response = await fetch(`https://wdk78z2fl4.execute-api.eu-central-1.amazonaws.com/dev/test`, {
       method: 'get',
       headers: new Headers({
         'Accept': 'application/json',
@@ -72,8 +72,10 @@ TestEndpointButton.addEventListener('click', async (evt) => {
       })
     });
 
-    OutputWrite(result)
-
+    if(response.status === 200)
+    {
+      OutputWrite(await response.json())
+    }
   }
   catch(err)  {
     OutputWrite('Error: ' + err)
@@ -82,5 +84,6 @@ TestEndpointButton.addEventListener('click', async (evt) => {
 
 function OutputWrite(value){
   Output.innerHTML = JSON.stringify(value, null, 2);
+  console.log('>>> ' + value)
   console.log(value)
 }

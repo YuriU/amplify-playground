@@ -3,7 +3,9 @@
 module.exports.handler = (event, context, cb) => {
   console.log('Received event', event)
   var response = {
-    message: `Hello there, ${event.requestContext.authorizer.claims.name}, your user ID is ${event.requestContext.authorizer.claims.sub}`,
+    message: event.requestContext.authorizer 
+      ? `Hello there, ${event.requestContext.authorizer.claims.name}, your user ID is ${event.requestContext.authorizer.claims.sub}` 
+      : `Hello anonymus`     ,
     method: `This is an authorized ${event.httpMethod} to Lambda from your API`,
     body: event
   }
