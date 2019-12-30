@@ -6,7 +6,7 @@
     "aws-amplify": "^2.2.1"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.5.2",
+    "copy-webpack-plugin": "^4.6.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
