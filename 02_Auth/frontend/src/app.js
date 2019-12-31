@@ -62,9 +62,9 @@ LoginButton.addEventListener('click', async (evt) => {
 
 TestEndpointButton.addEventListener('click', async (evt) => {
   try {
-    let accessToken = await (await Auth.currentSession()).getAccessToken().getJwtToken();
+    let accessToken = await (await Auth.currentSession()).getIdToken().getJwtToken();
     
-    let response = await fetch(`https://wdk78z2fl4.execute-api.eu-central-1.amazonaws.com/dev/test`, {
+    let response = await fetch(`https://la73dsw507.execute-api.eu-central-1.amazonaws.com/dev/test`, {
       method: 'get',
       headers: new Headers({
         'Accept': 'application/json',
