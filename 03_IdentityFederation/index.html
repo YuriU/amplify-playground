@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Amplify Framework</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap-theme-3.3.7.min.css">
+        <style>
+            html, body { font-family: "Amazon Ember", "Helvetica", "sans-serif"; margin: 0; }
+            a { color: #FF9900; }
+            h1 { font-weight: 300; }
+            .app { width: 100%; }
+            .app-header { color: white; text-align: center; background: linear-gradient(30deg, #f90 55%, #FFC300); width: 100%; margin: 0 0 1em 0; padding: 3em 0 3em 0; box-shadow: 1px 2px 4px rgba(0, 0, 0, .3); }
+            .app-logo { width: 126px; margin: 0 auto; }
+            .app-body { width: 400px; margin: 0 auto; text-align: center; }
+            .app-body button { background-color: #FF9900; font-size: 14px; color: white; text-transform: uppercase; padding: 1em; border: none; }
+            .app-body button:hover { opacity: 0.8; }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-inverse" role="navigation">
+
+        </nav>
+
+        <div class="container" role="main">
+            <h1>Testing Cognito Sign-In</h1>
+            <form class="authenticated col-md-2" id="features" action="">
+                <p><button type="button" id="buttonGetUser" class="btn btn-default">Current User</button></p>
+                <p><button type="button" id="buttonGetSession" class="btn btn-default">Current Session</button></p>
+                <p><button type="button" id="buttonTestGetCredentials" class="btn btn-default">Current credentials</button></p>
+                <p><button type="button" id="LoginButton" class="btn btn-info">Login</button></p>
+                <p><button type="button" id="LogoutButton" class="btn btn-warning">Logout</button></p>
+              </form>
+              <div class="col-md-10">
+                <h4>Results of Last Request</h4>
+                <div><pre><code id="output"></code></pre></div>
+              </div>
+        </div>
+        
+        <script src="main.bundle.js"></script>
+    </body>
+</html>
