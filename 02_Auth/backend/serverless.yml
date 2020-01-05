@@ -9,7 +9,7 @@ provider:
   
 custom:
   stage: ${opt:stage, self:provider.stage}
-  devCognitoPool: 
+  devCognitoPool: '<UserPoolId>'
   
 functions:
   test:
