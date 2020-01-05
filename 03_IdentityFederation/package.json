@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Amplify JavaScript Example",
   "dependencies": {
-    "aws-amplify": "^2.2.1"
+    "aws-amplify": "^2.2.1",
+    "aws-sdk": "^2.597.0",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
